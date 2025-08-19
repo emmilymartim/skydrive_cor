@@ -6,28 +6,40 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Com a descoberta desta tecnologia, chamada SkyDrive, uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede oque você achou dessa ideia??",
+        enunciado: "Com a descoberta desta tecnologia, chamada SkyDrive, uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede o que você achou dessa ideia?",
         alternativas: [
             {
                 texto: "Isso é assustador!",
-                afirmacao: "No início ficou com medo do que esse carro pode fazer. "
+                afirmacao: [
+                    "No início, você ficou com medo do que esse carro pode fazer.",
+                    "Você ficou imaginando como seria se todos começassem a usar esse carro, o caos que seria no céu."
+                ]
             },
             {
                 texto: "Isso é maravilhoso!",
-                afirmacao:"Cvoce gosotu, mas ficou com insegurança sobre a segurança do carro. "
+                afirmacao: [
+                    "Você gostou, mas ficou com insegurança sobre a segurança do carro.",
+                    "A ideia te animou, mas logo veio a dúvida de quem iria controlar tudo lá em cima."
+                ]
             }
         ]
     },
     {
-        enunciado: "Com a descoberta desta tecnologia, chamada SkyDRive, uma professora pediu para voce fazer um trabalho em grupo sobre este carro.você ultiliza que equipamentos para realizar o trabalho?",
+        enunciado: "Com a descoberta desta tecnologia, chamada SkyDrive, uma professora pediu para você fazer um trabalho em grupo sobre este carro. Você utiliza que equipamentos para realizar o trabalho?",
         alternativas: [
             {
-                texto: "Utiliza uma ferramenta de buscas na internet para encontrar imformações sobre o carro voador. explique numa linguagem que facilite o entendimento.",
-                afirmacao: "Conseguiu utilizar a  para buscar informações úteis."
+                texto: "Utiliza uma ferramenta de buscas na internet para encontrar informações sobre o carro voador. Explique numa linguagem que facilite o entendimento.",
+                afirmacao: [
+                    "Conseguiu utilizar para buscar informações úteis.",
+                    "Graças ao painel inteligente, conseguiu utilizar o carro voador para buscar informações sobre o clima antes de decolar."
+                ]
             },
             {
                 texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-                afirmacao: "Sentiu mais facilidade em utilizar seus próprios recursos para escrever o seu trabalho."
+                afirmacao: [
+                    "Sentiu mais facilidade em utilizar seus próprios recursos para escrever o seu trabalho.",
+                    "Percebeu que ficou mais simples organizar seus próprios pensamentos para desenvolver o trabalho."
+                ]
             }
         ]
     },
@@ -36,11 +48,17 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Defende a ideia de que o carro pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao: "Vem impulsionando a inovação na área de carros e luta para abrir novos caminhos profissionais com vendendor de carros."
+                afirmacao: [
+                    "Você vem impulsionando a inovação na área de carros e luta para abrir novos caminhos profissionais como vendedor de carros.",
+                    "Está abrindo horizontes na inovação de carros voadores e gerando novos caminhos de atuação profissional."
+                ]
             },
             {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para carros voadores e defendem a importância de proteger os trabalhadores.",
-                afirmacao: "Sua preocupação com as pessoas motivou a criar um grupo de estudos entre trabalhadores para discutir meios de utilização do carro de forma ética."
+                texto: "Me preocupo com as pessoas que perderão seus empregos para carros voadores e defendo a importância de proteger os trabalhadores.",
+                afirmacao: [
+                    "Sua preocupação com as pessoas motivou a criar um grupo de estudos entre trabalhadores para discutir meios de utilização do carro de forma ética.",
+                    "Seu cuidado com as pessoas levou à formação de um grupo para debater maneiras responsáveis de usar o carro voador."
+                ]
             }
         ]
     },
@@ -49,32 +67,42 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
-                afirmacao: "Notou também que muitas pessoas não sabem ainda utilizar as ferramentas tradicionais e decidiu compartilhar seus conhecimentos de design utilizando ferramentas de pintura digital para iniciantes."
+                afirmacao: [
+                    "Notou também que muitas pessoas ainda não sabem utilizar as ferramentas tradicionais e decidiu compartilhar seus conhecimentos de design utilizando ferramentas de pintura digital para iniciantes.",
+                    "Percebeu que iniciantes têm dificuldades com ferramentas tradicionais e começou a ensinar design com pintura digital."
+                ]
             },
             {
                 texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
-                afirmacao: "Acelerou o processo de criação de trabalhos utilizando geradores de imagem e agora consegue ensinar pessoas que sentem dificuldades em desenhar manualmente como utilizar também!"
+                afirmacao: [
+                    "Acelerou o processo de criação de trabalhos utilizando geradores de imagem e agora consegue ensinar pessoas que sentem dificuldades em desenhar manualmente como utilizar também!",
+                    "Usou geradores de imagem para acelerar a criação e agora você ensina pessoas com dificuldades."
+                ]
             }
         ]
     },
     {
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda. O problema é que a pessoa que vai ajudar ela mora longe..O que você faz? ",
+        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda. O problema é que a pessoa que vai ajudar mora longe. O que você faz?",
         alternativas: [
             {
-                texto: "não ir a casa dela,pos é muito longe.",
-                afirmacao: "Infelizmente passou a utilizar a IA para fazer todas suas tarefas e agora se sente dependente da IA para tudo."
+                texto: "Não vai à casa dela, pois é muito longe.",
+                afirmacao: [
+                    "Infelizmente passou a utilizar a IA para fazer todas as suas tarefas e agora se sente dependente da IA para tudo.",
+                    "Infelizmente passou a usar IA para tudo."
+                ]
             },
             {
-                texto: "pegar um SkyDrive e ir ate ela e ajudar, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao: "Percebeu que toda IA reproduz orientações baseadas na empresa que programou e muito do que o chat escrevia não refletia o que pensava e por isso sabe que os textos gerados pela IA devem servir como auxílio e não resultado final. "
+                texto: "Pega um SkyDrive e vai até ela para ajudar, mas é preciso manter a atenção, pois toda máquina erra. Por isso, revisar o trabalho e contribuir com perspectivas pessoais é essencial.",
+                afirmacao: [
+                    "Percebeu que toda IA reproduz orientações baseadas na empresa que a programou e muito do que o chat escrevia não refletia o que pensava. Por isso, sabe que os textos gerados pela IA devem servir como auxílio e não como resultado final.",
+                    "Notou que a IA seguia apenas diretrizes de quem a programou e nem sempre expressava suas próprias ideias."
+                ]
             }
         ]
-    },
+    }
 ];
 
-
 let atual = 0;
-let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta() {
@@ -82,23 +110,23 @@ function mostraPergunta() {
         mostraResultado();
         return;
     }
-    perguntaAtual = perguntas[atual];
+    const perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = "";
-    mostraAlternativas();
+    caixaAlternativas.innerHTML = "";
+    mostraAlternativas(perguntaAtual);
 }
 
-function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas) {
+function mostraAlternativas(perguntaAtual) {
+    perguntaAtual.alternativas.forEach((alternativa) => {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativas);
-    }
+    });
 }
 
-function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = opcaoSelecionada.afirmacao;
+function respostaSelecionada(opcaoSelecionada){
+    const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
     historiaFinal += afirmacoes + " ";
     atual++;
     mostraPergunta();
@@ -106,8 +134,13 @@ function respostaSelecionada(opcaoSelecionada) {
 
 function mostraResultado() {
     caixaPerguntas.textContent = "Em 2049...";
-    textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = "";
+    textoResultado.textContent = historiaFinal.trim();
+    caixaAlternativas.innerHTML = "";
+}
+
+function aleatorio (lista){
+    const posicao = Math.floor(Math.random()* lista.length);
+    return lista[posicao];
 }
 
 mostraPergunta();
