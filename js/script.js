@@ -81,4 +81,3 @@ function substituiNome(){
 }
 
 substituiNome();
-mostraPergunta();
